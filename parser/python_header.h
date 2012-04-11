@@ -4,22 +4,22 @@
 
 #include <language/duchain/duchainlock.h>
 
-#include "python-src/Include/pyport.h"
-#include "python-src/pyconfig.h"
-#include "python-src/Include/node.h"
+#include <python-kdevelop/pyport.h>
+#include <python-kdevelop/pyconfig.h>
+#include <python-kdevelop/node.h>
 
-#include "python-src/Include/Python.h"
+#include <python-kdevelop/Python.h>
 
-#include "python-src/Include/Python-ast.h"
-#include "python-src/Include/ast.h"
+#include <python-kdevelop/Python-ast.h>
+#include <python-kdevelop/ast.h>
 
-#include "python-src/Include/graminit.h"
-#include "python-src/Include/grammar.h"
-#include "python-src/Include/parsetok.h"
+#include <python-kdevelop/graminit.h>
+#include <python-kdevelop/grammar.h>
+#include <python-kdevelop/parsetok.h>
 
-#include "python-src/Include/unicodeobject.h"
+#include <python-kdevelop/unicodeobject.h>
 
-#include "python-src/Include/object.h"
+#include <python-kdevelop/object.h>
 
 // remove evil macros from headers which pollute the namespace (grr!)
 #undef test

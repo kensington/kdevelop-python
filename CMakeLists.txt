@@ -23,7 +23,6 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/duchain
     ${CMAKE_CURRENT_SOURCE_DIR}/parser
-    ${CMAKE_CURRENT_SOURCE_DIR}/python-src
     ${CMAKE_CURRENT_BINARY_DIR}/parser
     ${KDEVPGQT_INCLUDE_DIR}
 )
@@ -38,7 +37,6 @@ add_subdirectory(app_templates)
 add_subdirectory(parser)
 add_subdirectory(duchain)
 add_subdirectory(codecompletion)
-add_subdirectory(python-src)
 add_subdirectory(debugger)
 add_subdirectory(codegen)
 
@@ -67,5 +65,4 @@ install(TARGETS kdevpythonlanguagesupport DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES kdevpythonsupport.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
 install(DIRECTORY documentation_files DESTINATION ${DATA_INSTALL_DIR}/kdevpythonsupport)
-install(DIRECTORY python-src/Lib/encodings DESTINATION ${DATA_INSTALL_DIR}/kdevpythonsupport/encodings)
 

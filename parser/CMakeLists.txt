@@ -1,3 +1,15 @@
+find_library(LIBPYTHON-KDEVELOP python2.7-kdevelop)
+
+IF (LIBPYTHON-KDEVELOP)
+    SET(LIBPYTHON-KDEVELOP_FOUND TRUE)
+ENDIF (LIBPYTHON-KDEVELOP)
+
+IF (LIBPYTHON-KDEVELOP_FOUND)
+    MESSAGE(STATUS "Found python-kdevelop: ${LIBPYTHON-KDEVELOP}")
+ELSE (LIBPYTHON-KDEVELOP_FOUND)
+    MESSAGE(FATAL_ERROR "Missing required python-kdevelop")
+ENDIF (LIBPYTHON-KDEVELOP_FOUND)
+
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}
@@ -17,7 +29,7 @@ target_link_libraries(kdev4pythonparser
     ${KDE4_KDECORE_LIBS} 
     ${KDEVPLATFORM_LANGUAGE_LIBRARIES}
     ${QT_QTCORE_LIBRARY} 
-    ${kdevpython_SOURCE_DIR}/python-src/libpython2.7-kdevelop.so
+    ${LIBPYTHON-KDEVELOP}
 )
 
 install(TARGETS kdev4pythonparser DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
